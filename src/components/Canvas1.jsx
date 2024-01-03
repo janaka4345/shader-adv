@@ -51,7 +51,7 @@ function draw(p5) {
       p5.map(p5.mouseY, 0, ch, ch, 0),
     ]); // we flip Y so it's oriented properly in our shader
     // myShader.setUniform("u_color", 1.0, 1.0, 0.0, 1.0);
-    p5.rect(0, 0, 0, 0);
+    p5.rect(0, 0, 10, 10);
     // myShader.setUniform("u_image", img);
     // p5.noLoop();
   };
