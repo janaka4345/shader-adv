@@ -5,7 +5,7 @@ let ch = 400;
 let myShader;
 let img;
 
-export default function Canvas(props) {
+export default function Canvas1(props) {
   const [t, setT] = useState(0);
 
   return (
@@ -31,7 +31,7 @@ function setup(p5) {
     p5.createCanvas(cw, ch, p5.WEBGL);
     p5.shader(myShader);
 
-    p5.background(255, 0, 0);
+    p5.background(0, 0, 0);
 
     myShader.setUniform("u_resolution", [cw, ch]);
   };
@@ -40,7 +40,7 @@ function preload(p5) {
   img = p5.loadImage("./colorgrid.png");
   myShader = p5.loadShader(
     "./src/assets/shaders/vertexShader.vert",
-    "./src/assets/shaders/fragment-image-3.frag"
+    "./src/assets/shaders/fragmentColor.frag"
   );
 }
 function draw(p5) {
@@ -50,8 +50,9 @@ function draw(p5) {
       p5.mouseX,
       p5.map(p5.mouseY, 0, ch, ch, 0),
     ]); // we flip Y so it's oriented properly in our shader
-
-    p5.rect(0, 0, 5, 5);
+    // myShader.setUniform("u_color", 1.0, 1.0, 0.0, 1.0);
+    p5.rect(0, 0, 0, 0);
+    // myShader.setUniform("u_image", img);
     // p5.noLoop();
   };
 }
