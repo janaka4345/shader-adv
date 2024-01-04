@@ -22,12 +22,13 @@ float rectangle(vec2 position, vec2 scale){
 
 void main(){
     vec2 position=gl_FragCoord.xy/u_resolution.xy;
-    vec2 translate=vec2( sin(u_time)*0.5,cos(u_time)*0.5 );
+    vec2 translate=vec2( (sin(u_time))*0.5,abs(cos(u_time))*0.5 );
     vec2 pos=position+translate;
 
-    float color=circle(vec2(pos),0.2);
-    // float color =rectangle(pos,vec2(0.3,0.3));
-    gl_FragColor=vec4(1.0-color,0.0 ,0.0 ,1.0 );  
+    // float color=circle(vec2(pos),0.2);
+    float color =rectangle(pos,vec2(0.3,0.3));
+    gl_FragColor=vec4(1.0-color,0.0 ,0.0 ,1.0 ); 
+    
 }
 `;
 export default fs;
