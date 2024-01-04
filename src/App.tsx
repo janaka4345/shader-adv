@@ -6,13 +6,15 @@ import Canvas from "./components/Canvas"; // blue print for shaders
 import ShaderScaleRotation from "./components/ShaderScaleRotation"; // shader matrix blueprint for scale and rotation
 import Canvas1 from "./components/Canvas1"; //scale rotation with shader matrix
 import Warp from "./components/Warp"; // warping
+import Rainbow from "./components/Rainbow"; // rainbow water flow
 function App() {
   return (
     <>
       {/* <Canvas/> */}
       {/* <ShaderScaleRotation /> */}
       {/* <Canvas1 /> */}
-      <Warp />
+      {/* <Warp /> */}
+      <Rainbow />
     </>
   );
 }
