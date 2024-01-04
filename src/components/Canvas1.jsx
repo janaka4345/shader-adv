@@ -1,5 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ReactP5Wrapper } from "@p5-wrapper/react";
+import fs from "../glsl/fragmentTransform";
+import vs from "../glsl/vertexShader";
+
 let cw = 400;
 let ch = 400;
 let myShader;
@@ -29,6 +32,7 @@ function setup(p5) {
   return () => {
     p5.pixelDensity(1);
     p5.createCanvas(cw, ch, p5.WEBGL);
+    myShader = p5.createShader(vs, fs);
     p5.shader(myShader);
 
     p5.background(0, 0, 0);
@@ -37,11 +41,12 @@ function setup(p5) {
   };
 }
 function preload(p5) {
-  img = p5.loadImage("./colorgrid.png");
-  myShader = p5.loadShader(
-    "./src/assets/shaders/vertexShader.vert",
-    "./src/assets/shaders/fragmentColor.frag"
-  );
+  // img = p5.loadImage("./colorgrid.png");
+  // myShader = p5.loadShader(
+  //   "./src/glsl/vertexShader.vert",
+  //   // "./src/glsl/fragmentColor.frag"// basic shapes
+  //   "./src/glsl/fragmentTransform.frag" // transforming shapees
+  // );
 }
 function draw(p5) {
   return () => {
