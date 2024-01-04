@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ReactP5Wrapper } from "@p5-wrapper/react";
 import fs from "../glsl/fragmentTransform";
+import fsRotation from "../glsl/fragmentTransformRotation";
 import vs from "../glsl/vertexShader";
 
 let cw = 400;
@@ -32,7 +33,8 @@ function setup(p5) {
   return () => {
     p5.pixelDensity(1);
     p5.createCanvas(cw, ch, p5.WEBGL);
-    myShader = p5.createShader(vs, fs);
+    // myShader = p5.createShader(vs, fs);
+    myShader = p5.createShader(vs, fsRotation);
     p5.shader(myShader);
 
     p5.background(0, 0, 0);
