@@ -5,14 +5,14 @@ import "./App.css";
 import Canvas from "./components/Canvas"; // blue print for shaders
 import ShaderScaleRotation from "./components/ShaderScaleRotation"; // shader matrix blueprint for scale and rotation
 import Canvas1 from "./components/Canvas1"; //scale rotation with shader matrix
-import Canvas2 from "./components/Canvas2"; // warping
+import Warp from "./components/Warp"; // warping
 function App() {
   return (
     <>
       {/* <Canvas/> */}
       {/* <ShaderScaleRotation /> */}
       {/* <Canvas1 /> */}
-      <Canvas2 />
+      <Warp />
     </>
   );
 }

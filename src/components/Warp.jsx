@@ -11,7 +11,7 @@ let ch = 400;
 let myShader;
 let img;
 
-export default function Canvas2(props) {
+export default function Warp(props) {
   const [t, setT] = useState(0);
 
   return (
