@@ -1,15 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ReactP5Wrapper } from "@p5-wrapper/react";
-import fs from "../glsl/fragmentTransform";
-import fsRotation from "../glsl/fragmentTransformRotation"; //scale and rotation
+import fsScaleRotation from "../glsl/fragmentTransformScaleRotation"; //scale rotation template
 import vs from "../glsl/vertexShader";
 
 let cw = 400;
 let ch = 400;
 let myShader;
-let img;
 
-export default function Canvas1(props) {
+export default function ShaderScaleRotation(props) {
   const [t, setT] = useState(0);
 
   return (
@@ -34,7 +32,7 @@ function setup(p5) {
     p5.pixelDensity(1);
     p5.createCanvas(cw, ch, p5.WEBGL);
     // myShader = p5.createShader(vs, fs);
-    myShader = p5.createShader(vs, fsRotation);
+    myShader = p5.createShader(vs, fsScaleRotation);
     p5.shader(myShader);
 
     p5.background(0, 0, 0);

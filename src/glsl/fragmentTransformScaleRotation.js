@@ -1,4 +1,4 @@
-const fsRotation = `
+const fsScaleRotation = `
 #ifdef GL_ES
 precision mediump float;
 #endif
@@ -49,4 +49,4 @@ void main(){
     
 }
 `;
-export default fsRotation;
+export default fsScaleRotation;
