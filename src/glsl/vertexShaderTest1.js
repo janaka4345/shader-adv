@@ -5,6 +5,8 @@ precision mediump float;
 
 #endif
 
+
+
 attribute vec3 aPosition;
 
 // I'm excluding our normal vertex position data operations from this example code.

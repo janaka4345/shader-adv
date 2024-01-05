@@ -10,7 +10,8 @@ import Rainbow from "./components/Rainbow"; // rainbow water flow
 import Light from "./components/Light"; // spot light
 import LightCircle from "./components/LightCircle"; // light circle
 import MorphingGrid from "./components/MorphingGrid"; // morph grid
-import Canvas2 from "./components/Canvas2"; //
+import Canvas2 from "./components/Canvas2"; //understang vertex shader
+import Canvas3 from "./components/Canvas3"; //understang vertex shader
 function App() {
   return (
     <>
@@ -22,7 +23,8 @@ function App() {
       {/* <Light /> */}
       {/* <LightCircle /> */}
       {/* <MorphingGrid /> */}
-      <Canvas2 />
+      {/* <Canvas2 /> */}
+      <Canvas3 />
     </>
   );
 }

@@ -3,14 +3,14 @@ import { ReactP5Wrapper } from "@p5-wrapper/react";
 // import fs from "../glsl/fragmentTransform";
 // import fsRotation from "../glsl/fragmentTransformRotation"; //scale and rotation
 
-import vsTest from "../glsl/vertexShaderTest1";
-import fsTest from "../glsl/fragmentTest1";
+import vsTest from "../glsl/vertexShaderTest";
+import fsTest from "../glsl/fragmentTest";
 
 let cw = 400;
 let ch = 400;
 let myShader;
 
-export default function Canvas2(props) {
+export default function Canvas3(props) {
   const [t, setT] = useState(0);
 
   return (
