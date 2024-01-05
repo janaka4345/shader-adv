@@ -11,7 +11,8 @@ import Light from "./components/Light"; // spot light
 import LightCircle from "./components/LightCircle"; // light circle
 import MorphingGrid from "./components/MorphingGrid"; // morph grid
 import Canvas2 from "./components/Canvas2"; //understang vertex shader
-import Canvas3 from "./components/Canvas3"; //understang vertex shader
+import Canvas3 from "./components/Canvas3"; //random grid with pixels
+import Canvas4 from "./components/Canvas4"; //
 function App() {
   return (
     <>
@@ -24,7 +25,8 @@ function App() {
       {/* <LightCircle /> */}
       {/* <MorphingGrid /> */}
       {/* <Canvas2 /> */}
-      <Canvas3 />
+      {/* <Canvas3 /> */}
+      <Canvas4 />
     </>
   );
 }
