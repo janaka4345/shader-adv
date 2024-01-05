@@ -7,6 +7,7 @@ import ShaderScaleRotation from "./components/ShaderScaleRotation"; // shader ma
 import Canvas1 from "./components/Canvas1"; //scale rotation with shader matrix
 import Warp from "./components/Warp"; // warping
 import Rainbow from "./components/Rainbow"; // rainbow water flow
+import Light from "./components/Light"; // rainbow water flow
 function App() {
   return (
     <>
@@ -14,7 +15,8 @@ function App() {
       {/* <ShaderScaleRotation /> */}
       {/* <Canvas1 /> */}
       {/* <Warp /> */}
-      <Rainbow />
+      {/* <Rainbow /> */}
+      <Light />
     </>
   );
 }
