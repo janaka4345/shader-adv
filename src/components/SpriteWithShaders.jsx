@@ -4,14 +4,14 @@ import { ReactP5Wrapper } from "@p5-wrapper/react";
 // import fsRotation from "../glsl/fragmentTransformRotation"; //scale and rotation
 
 import vsTest from "../glsl/vertexShaderTest";
-import fsTest from "../glsl/fragmentTest3";
+import fsTestSprite from "../glsl/fragmentTestSprite";
 
 let cw = 400;
 let ch = 400;
 let myShader;
 let img;
 
-export default function Canvas4(props) {
+export default function SpriteWithShaders(props) {
   const [t, setT] = useState(0);
 
   return (
@@ -47,7 +47,7 @@ function setup(p5) {
     p5.pixelDensity(1);
     p5.createCanvas(cw, ch, p5.WEBGL);
     // myShader = p5.createShader(vs, fs);
-    myShader = p5.createShader(vsTest, fsTest);
+    myShader = p5.createShader(vsTest, fsTestSprite);
     p5.shader(myShader);
 
     p5.background(255, 255, 255, 0);
@@ -66,11 +66,11 @@ function preload(p5) {
   // );
 }
 function draw(p5) {
-  let ssboData = new Float32Array([
-    0.2, 0.6, 0.4, 0.3, 0.7, 0.5, 0.1, 0.8, 0.4,
-  ]);
+  // let ssboData = new Float32Array([
+  //   0.2, 0.6, 0.4, 0.3, 0.7, 0.5, 0.1, 0.8, 0.4,
+  // ]);
   return () => {
-    myShader.setUniform("u_Data", ssboData);
+    // myShader.setUniform("u_Data", ssboData);
     myShader.setUniform("u_time", p5.millis() / 1000.0); // we divide millis by 1000 to convert it to seconds
     myShader.setUniform("u_mouse", [
       p5.mouseX,

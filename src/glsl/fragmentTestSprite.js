@@ -1,4 +1,4 @@
-const fsTest = `
+const fsTestSprite = `
 #ifdef GL_ES
 precision mediump float;
 #endif
@@ -43,4 +43,4 @@ void main(){
     gl_FragColor=texColor; 
     
 }`;
-export default fsTest;
+export default fsTestSprite;

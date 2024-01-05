@@ -12,7 +12,7 @@ import LightCircle from "./components/LightCircle"; // light circle
 import MorphingGrid from "./components/MorphingGrid"; // morph grid
 import Canvas2 from "./components/Canvas2"; //understang vertex shader
 import Canvas3 from "./components/Canvas3"; //random grid with pixels
-import Canvas4 from "./components/Canvas4"; //
+import SpriteWithShaders from "./components/SpriteWithShaders"; //
 function App() {
   return (
     <>
@@ -26,7 +26,7 @@ function App() {
       {/* <MorphingGrid /> */}
       {/* <Canvas2 /> */}
       {/* <Canvas3 /> */}
-      <Canvas4 />
+      <SpriteWithShaders />
     </>
   );
 }
