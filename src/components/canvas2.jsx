@@ -15,11 +15,20 @@ export default function Canvas2(props) {
 
   return (
     <div>
-      <div>
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: "50%",
+          border: "red 2px solid",
+        }}
+      >
         <ReactP5Wrapper sketch={sketch} />
       </div>
-      <button onClick={() => setT((prev) => (prev += 1))}>click</button>
-      <h1>{t}</h1>
+      <div style={{ border: "blue 2px solid" }}>
+        <button onClick={() => setT((prev) => (prev += 1))}>click</button>
+        <h1>{t}</h1>
+      </div>
     </div>
   );
 }
@@ -38,7 +47,7 @@ function setup(p5) {
     myShader = p5.createShader(vsTest, fsTest);
     p5.shader(myShader);
 
-    p5.background(0, 0, 0);
+    p5.background(255, 255, 255, 0);
 
     myShader.setUniform("u_resolution", [cw, ch]);
   };
@@ -63,17 +72,24 @@ function draw(p5) {
       p5.map(p5.mouseY, 0, ch, ch, 0),
     ]); // we flip Y so it's oriented properly in our shader
     // myShader.setUniform("u_color", 1.0, 1.0, 0.0, 1.0);
-    p5.rect(0, 0, 10, 10);
+    p5.fill(0, 0, 255);
+    // p5.rect(-50, -50, 1, 1);
     p5.beginShape();
-    p5.vertex(-1, -1);
+    p5.vertex(-0.5 - 0.5);
     p5.vertex(1, -1);
     p5.vertex(0, 1);
+    p5.endShape(p5.CLOSE);
+
+    p5.beginShape();
+    p5.vertex(0.0, 0.0);
+    p5.vertex(0.5, 0.5);
+    p5.vertex(1, 0);
     p5.endShape(p5.CLOSE);
     // myShader.setUniform("u_image", img);
     // p5.noLoop();
   };
 }
 function mousePressed(p5) {
-  console.log(p5.frameRate());
-  // console.log(myShader);
+  // console.log(p5.frameRate());
+  console.log(myShader);
 }
