@@ -10,6 +10,7 @@ import Rainbow from "./components/Rainbow"; // rainbow water flow
 import Light from "./components/Light"; // spot light
 import LightCircle from "./components/LightCircle"; // light circle
 import MorphingGrid from "./components/MorphingGrid"; // morph grid
+import Canvas2 from "./components/Canvas2"; //
 function App() {
   return (
     <>
@@ -20,7 +21,8 @@ function App() {
       {/* <Rainbow /> */}
       {/* <Light /> */}
       {/* <LightCircle /> */}
-      <MorphingGrid />
+      {/* <MorphingGrid /> */}
+      <Canvas2 />
     </>
   );
 }
