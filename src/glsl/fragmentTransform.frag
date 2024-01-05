@@ -18,6 +18,7 @@ float rectangle(vec2 position, vec2 scale){
     return shaper.x * shaper.y;
 }
 
+
 void main(){
     vec2 position=gl_FragCoord.xy/u_resolution.xy;
     vec2 translate=vec2( sin(u_time)*0.5,cos(u_time)*0.5 );

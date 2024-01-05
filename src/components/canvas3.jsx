@@ -16,16 +16,18 @@ export default function Canvas3(props) {
   return (
     <div>
       <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: "50%",
-          border: "red 2px solid",
-        }}
+      // style={{
+      //   position: "absolute",
+      //   top: 0,
+      //   left: "50%",
+      //   border: "red 2px solid",
+      // }}
       >
         <ReactP5Wrapper sketch={sketch} />
       </div>
-      <div style={{ border: "blue 2px solid" }}>
+      <div
+      // style={{ border: "blue 2px solid" }}
+      >
         <button onClick={() => setT((prev) => (prev += 1))}>click</button>
         <h1>{t}</h1>
       </div>
@@ -75,14 +77,9 @@ function draw(p5) {
     p5.fill(0, 0, 255);
     // p5.rect(-50, -50, 1, 1);
     p5.beginShape();
-    p5.vertex(-0.5 - 0.5);
-    p5.vertex(1, -1);
+    p5.vertex(0, 0);
     p5.vertex(0, 1);
-    p5.endShape(p5.CLOSE);
-
-    p5.beginShape();
-    p5.vertex(0.0, 0.0);
-    p5.vertex(0.5, 0.5);
+    p5.vertex(1, 1);
     p5.vertex(1, 0);
     p5.endShape(p5.CLOSE);
     // myShader.setUniform("u_image", img);
@@ -90,6 +87,6 @@ function draw(p5) {
   };
 }
 function mousePressed(p5) {
-  // console.log(p5.frameRate());
-  console.log(myShader);
+  console.log(p5.frameRate());
+  // console.log(myShader);
 }
