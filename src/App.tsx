@@ -9,6 +9,7 @@ import Warp from "./components/Warp"; // warping
 import Rainbow from "./components/Rainbow"; // rainbow water flow
 import Light from "./components/Light"; // spot light
 import LightCircle from "./components/LightCircle"; // light circle
+import MorphingGrid from "./components/MorphingGrid"; // morph grid
 function App() {
   return (
     <>
@@ -18,7 +19,8 @@ function App() {
       {/* <Warp /> */}
       {/* <Rainbow /> */}
       {/* <Light /> */}
-      <LightCircle />
+      {/* <LightCircle /> */}
+      <MorphingGrid />
     </>
   );
 }
