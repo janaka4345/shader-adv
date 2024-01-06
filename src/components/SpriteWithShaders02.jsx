@@ -10,7 +10,6 @@ let cw = 400;
 let ch = 400;
 let myShader;
 let img;
-let elapsedTime = 0.0;
 
 export default function SpriteWithShaders02(props) {
   const [t, setT] = useState(0);
@@ -74,10 +73,8 @@ function draw(p5) {
   //   0.2, 0.6, 0.4, 0.3, 0.7, 0.5, 0.1, 0.8, 0.4,
   // ]);
   return () => {
-    elapsedTime += p5.deltaTime;
-    // console.log(elapsedTime);
     // myShader.setUniform("u_Data", ssboData);
-    myShader.setUniform("u_time", elapsedTime * 0.001); // we divide millis by 1000 to convert it to seconds
+    myShader.setUniform("u_time", p5.frameCount * 0.001); // we divide millis by 1000 to convert it to seconds
     myShader.setUniform("u_mouse", [
       p5.mouseX,
       p5.map(p5.mouseY, 0, ch, ch, 0),
@@ -97,8 +94,7 @@ function draw(p5) {
   };
 }
 function mousePressed(p5) {
-  console.log(p5.floor(elapsedTime * 0.05 * 0.001) * 11);
-  // console.log(p5.millis(), " ", elapsedTime);
+  // console.log(p5.millis());
   // console.log((p5.millis() * p5.deltaTime) / 1000);
   // console.log(myShader);
   // console.log(p5);

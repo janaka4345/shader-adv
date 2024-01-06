@@ -31,7 +31,7 @@ void main(){
     uv = uv/normalizedRes;
 
 // Calculate the offset in cols and rows
-    float timeX = u_time*0.05;
+    float timeX = u_time*1.0;
     float timeY = floor(timeX)*1.1;
     // vec2 offset = vec2( floor(timeX)/normalizedRes.x,
     //                     1.0-(floor(timeY)/normalizedRes.y) );
