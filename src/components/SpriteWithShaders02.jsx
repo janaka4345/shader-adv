@@ -4,14 +4,14 @@ import { ReactP5Wrapper } from "@p5-wrapper/react";
 // import fsRotation from "../glsl/fragmentTransformRotation"; //scale and rotation
 
 import vsTest from "../glsl/vertexShaderTest";
-import fsTestSprite from "../glsl/fragmentTestSprite";
+import fsTestSprite02 from "../glsl/fragmentTestSprite02";
 
 let cw = 400;
 let ch = 400;
 let myShader;
 let img;
 
-export default function SpriteWithShaders(props) {
+export default function SpriteWithShaders02(props) {
   const [t, setT] = useState(0);
 
   return (
@@ -47,7 +47,7 @@ function setup(p5) {
     p5.pixelDensity(1);
     p5.createCanvas(cw, ch, p5.WEBGL);
     // myShader = p5.createShader(vs, fs);
-    myShader = p5.createShader(vsTest, fsTestSprite);
+    myShader = p5.createShader(vsTest, fsTestSprite02);
     p5.shader(myShader);
 
     p5.background(255, 255, 255, 0);
@@ -58,8 +58,7 @@ function setup(p5) {
   };
 }
 function preload(p5) {
-  // img = p5.loadImage("./numberedgrid.png"); //numbered grid low rez
-  img = p5.loadImage("./Test_grid_high_def.png"); //numbered grid high rez
+  img = p5.loadImage("./Test_grid_high_def.png");
   // myShader = p5.loadShader(
   //   "./src/glsl/vertexShader.vert",
   //   // "./src/glsl/fragmentColor.frag"// basic shapes
