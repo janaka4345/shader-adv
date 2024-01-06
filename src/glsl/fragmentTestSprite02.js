@@ -1,4 +1,4 @@
-const fsTestSprite = `
+const fsTestSprite02 = `
 #ifdef GL_ES
 precision mediump float;
 #endif
@@ -31,7 +31,7 @@ void main(){
     uv = uv/normalizedRes;
 
 // Calculate the offset in cols and rows
-    float timeX = u_time*0.2;
+    float timeX = u_time*0.02;
     float timeY = floor(timeX/float(10.0));
     // vec2 offset = vec2( floor(timeX)/normalizedRes.x,
     //                     1.0-(floor(timeY)/normalizedRes.y) );
@@ -44,4 +44,4 @@ void main(){
     gl_FragColor=texColor; 
     
 }`;
-export default fsTestSprite;
+export default fsTestSprite02;
