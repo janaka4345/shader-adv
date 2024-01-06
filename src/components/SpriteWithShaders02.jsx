@@ -18,12 +18,15 @@ export default function SpriteWithShaders02(props) {
   return (
     <div>
       <div
-      // style={{
-      //   position: "absolute",
-      //   top: 0,
-      //   left: "50%",
-      //   border: "red 2px solid",
-      // }}
+        style={{
+          width: cw,
+          height: ch,
+          // position: "absolute",
+          // top: 0,
+          // left: "50%",
+          border: "red 2px solid",
+          // boxSizing: "border-box",
+        }}
       >
         <ReactP5Wrapper sketch={sketch} />
       </div>
@@ -94,7 +97,7 @@ function draw(p5) {
   };
 }
 function mousePressed(p5) {
-  console.log(p5.frameRate());
+  console.log(p5.floor(elapsedTime * 0.05 * 0.001) * 11);
   // console.log(p5.millis(), " ", elapsedTime);
   // console.log((p5.millis() * p5.deltaTime) / 1000);
   // console.log(myShader);

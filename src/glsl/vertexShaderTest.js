@@ -23,6 +23,7 @@ void main() {
 
   // scale the rect by two, and move it to the center of the screen
   positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
+  
 
   gl_Position = positionVec4;
 

@@ -31,17 +31,20 @@ void main(){
     uv = uv/normalizedRes;
 
 // Calculate the offset in cols and rows
-    float timeX = u_time*0.02;
-    float timeY = floor(timeX/float(10.0));
+    float timeX = u_time*0.05;
+    float timeY = floor(timeX)*1.1;
     // vec2 offset = vec2( floor(timeX)/normalizedRes.x,
     //                     1.0-(floor(timeY)/normalizedRes.y) );
     vec2 offset=vec2(timeX,timeY);
     uv = fract(uv+offset);
 
 
+
+    // vec4 texColor = texture2D(u_image, vec2(uv.x*0.1+0.0,uv.y*0.1+0.1));
     vec4 texColor = texture2D(u_image, uv);
   
     gl_FragColor=texColor; 
+    // gl_FragColor=vec4(uv.x,uv.y,0.0,1.0); 
     
 }`;
 export default fsTestSprite02;

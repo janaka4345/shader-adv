@@ -13,7 +13,7 @@ import MorphingGrid from "./components/MorphingGrid"; // morph grid
 import Canvas2 from "./components/Canvas2"; //understang vertex shader
 import Canvas3 from "./components/Canvas3"; //random grid with pixels
 import SpriteWithShaders from "./components/SpriteWithShaders"; //sprite animation with shaders
-import SpriteWithShaders02 from "./components/SpriteWithShaders02"; //sprite animation with shaders
+import SpriteWithShaders02 from "./components/SpriteWithShaders02"; //sprite with shaders sliding
 function App() {
   return (
     <>
